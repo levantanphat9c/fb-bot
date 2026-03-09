@@ -1,0 +1,39 @@
+schedule:
+  enabled: true
+  post_time: "19:00"
+  timezone: "Asia/Ho_Chi_Minh"
+  frequency: "daily"  # daily/weekly/custom
+
+content:
+  types: ["review", "tutorial", "strategy"]
+  language: "vi"
+  min_length: 250
+  max_length: 400
+  ai_model: "claude-sonnet-4-20250514"
+
+facebook:
+  page_id: "${FACEBOOK_PAGE_ID}"
+  access_token: "${FACEBOOK_ACCESS_TOKEN}"
+  dry_run: false  # true = test mode, không post thật
+  api_version: "v24.0"
+
+research:
+  min_rating: 7.0
+  max_complexity: 4.0
+  avoid_recent_days: 30  # Không lặp game trong 30 ngày
+  min_players: 1
+  max_players: 8
+
+images:
+  max_size_mb: 5
+  min_width: 720
+  min_height: 720
+  preferred_format: "jpg"
+  fallback_to_unsplash: true
+
+logging:
+  level: "INFO"
+  file: "logs/bot.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 5
+
