@@ -40,7 +40,6 @@ logs/
 
 # Data
 data/
-images/
 *.json
 !config/config.yaml.example
 !requirements.txt
